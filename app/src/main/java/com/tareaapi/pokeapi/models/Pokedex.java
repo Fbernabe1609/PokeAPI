@@ -9,22 +9,22 @@ public class Pokedex {
 
     @SerializedName("count")
     @Expose
-    private Integer count;
+    private int count;
     @SerializedName("next")
     @Expose
     private String next;
     @SerializedName("previous")
     @Expose
-    private Object previous;
+    private String previous;
     @SerializedName("results")
     @Expose
     private List<PokemonList> results = null;
 
-    public Integer getCount() {
+    public int getCount() {
         return count;
     }
 
-    public void setCount(Integer count) {
+    public void setCount(int count) {
         this.count = count;
     }
 
@@ -36,11 +36,11 @@ public class Pokedex {
         this.next = next;
     }
 
-    public Object getPrevious() {
+    public String getPrevious() {
         return previous;
     }
 
-    public void setPrevious(Object previous) {
+    public void setPrevious(String previous) {
         this.previous = previous;
     }
 

@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 public interface PokeAPI {
-    @GET("pokemon")
+    @GET("pokemon/")
     Call<Pokedex> getPokedex();
     @GET("pokemon/{pokemonName}")
     Call<Pokedex> getPokemonData(@Path("pokemonName") String pokemonName);

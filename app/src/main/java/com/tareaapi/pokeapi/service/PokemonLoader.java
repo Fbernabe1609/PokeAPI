@@ -12,22 +12,25 @@ public class PokemonLoader implements PokeAPI{
     final String URL_BASE = "https://pokeapi.co/api/v2/";
 
     public PokemonLoader() {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl(URL_BASE).addConverterFactory(GsonConverterFactory.create()).build();
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(URL_BASE)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
         pokeAPI = retrofit.create(PokeAPI.class);
     }
 
     @Override
     public Call<Pokedex> getPokedex() {
-        return null;
+        return pokeAPI.getPokedex();
     }
 
     @Override
     public Call<Pokedex> getPokemonData(String pokemonName) {
-        return null;
+        return pokeAPI.getPokemonData(pokemonName);
     }
 
     @Override
     public Call<Pokedex> getPokemonData(int pokemonNum) {
-        return null;
+        return pokeAPI.getPokemonData(pokemonNum);
     }
 }

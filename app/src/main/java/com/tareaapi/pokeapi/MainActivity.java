@@ -3,6 +3,7 @@ package com.tareaapi.pokeapi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.tareaapi.pokeapi.models.Pokedex;
@@ -23,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<Pokedex>() {
             @Override
             public void onResponse(Call<Pokedex> call, Response<Pokedex> response) {
-
+                Pokedex pokedex = response.body();
+                System.out.println(pokedex.getResults().get(0).getName());
             }
 
             @Override
