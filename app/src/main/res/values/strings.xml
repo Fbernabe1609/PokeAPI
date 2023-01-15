@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PokeAPI</string>
+    <string name="nombre_n_pokemon">Nombre/Nº pokemon</string>
+    <string name="pokemon_placeholder">Pokemon</string>
 </resources>
