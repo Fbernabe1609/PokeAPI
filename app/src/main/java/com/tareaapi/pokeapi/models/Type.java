@@ -7,16 +7,16 @@ public class Type {
 
     @SerializedName("slot")
     @Expose
-    private Integer slot;
+    private int slot;
     @SerializedName("type")
     @Expose
     private String type;
 
-    public Integer getSlot() {
+    public int getSlot() {
         return slot;
     }
 
-    public void setSlot(Integer slot) {
+    public void setSlot(int slot) {
         this.slot = slot;
     }
 

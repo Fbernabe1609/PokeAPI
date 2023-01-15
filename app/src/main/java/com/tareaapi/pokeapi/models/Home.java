@@ -10,13 +10,13 @@ public class Home {
     private String frontDefault;
     @SerializedName("front_female")
     @Expose
-    private Object frontFemale;
+    private String frontFemale;
     @SerializedName("front_shiny")
     @Expose
     private String frontShiny;
     @SerializedName("front_shiny_female")
     @Expose
-    private Object frontShinyFemale;
+    private String frontShinyFemale;
 
     public String getFrontDefault() {
         return frontDefault;
@@ -26,11 +26,11 @@ public class Home {
         this.frontDefault = frontDefault;
     }
 
-    public Object getFrontFemale() {
+    public String getFrontFemale() {
         return frontFemale;
     }
 
-    public void setFrontFemale(Object frontFemale) {
+    public void setFrontFemale(String frontFemale) {
         this.frontFemale = frontFemale;
     }
 
@@ -42,11 +42,11 @@ public class Home {
         this.frontShiny = frontShiny;
     }
 
-    public Object getFrontShinyFemale() {
+    public String getFrontShinyFemale() {
         return frontShinyFemale;
     }
 
-    public void setFrontShinyFemale(Object frontShinyFemale) {
+    public void setFrontShinyFemale(String frontShinyFemale) {
         this.frontShinyFemale = frontShinyFemale;
     }
 

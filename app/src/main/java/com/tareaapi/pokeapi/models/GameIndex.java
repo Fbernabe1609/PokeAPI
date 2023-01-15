@@ -8,16 +8,16 @@ public class GameIndex {
 
     @SerializedName("game_index")
     @Expose
-    private Integer gameIndex;
+    private int gameIndex;
     @SerializedName("version")
     @Expose
     private Version version;
 
-    public Integer getGameIndex() {
+    public int getGameIndex() {
         return gameIndex;
     }
 
-    public void setGameIndex(Integer gameIndex) {
+    public void setGameIndex(int gameIndex) {
         this.gameIndex = gameIndex;
     }
 

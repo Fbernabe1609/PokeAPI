@@ -11,10 +11,10 @@ public class Ability {
     private Ability__1 ability;
     @SerializedName("is_hidden")
     @Expose
-    private Boolean isHidden;
+    private boolean isHidden;
     @SerializedName("slot")
     @Expose
-    private Integer slot;
+    private int slot;
 
     public Ability__1 getAbility() {
         return ability;
@@ -24,19 +24,19 @@ public class Ability {
         this.ability = ability;
     }
 
-    public Boolean getIsHidden() {
+    public boolean getIsHidden() {
         return isHidden;
     }
 
-    public void setIsHidden(Boolean isHidden) {
+    public void setIsHidden(boolean isHidden) {
         this.isHidden = isHidden;
     }
 
-    public Integer getSlot() {
+    public int getSlot() {
         return slot;
     }
 
-    public void setSlot(Integer slot) {
+    public void setSlot(int slot) {
         this.slot = slot;
     }
 

@@ -10,25 +10,25 @@ public class Sprites {
     private String backDefault;
     @SerializedName("back_female")
     @Expose
-    private Object backFemale;
+    private String backFemale;
     @SerializedName("back_shiny")
     @Expose
     private String backShiny;
     @SerializedName("back_shiny_female")
     @Expose
-    private Object backShinyFemale;
+    private String backShinyFemale;
     @SerializedName("front_default")
     @Expose
     private String frontDefault;
     @SerializedName("front_female")
     @Expose
-    private Object frontFemale;
+    private String frontFemale;
     @SerializedName("front_shiny")
     @Expose
     private String frontShiny;
     @SerializedName("front_shiny_female")
     @Expose
-    private Object frontShinyFemale;
+    private String frontShinyFemale;
 
     public String getBackDefault() {
         return backDefault;
@@ -38,11 +38,11 @@ public class Sprites {
         this.backDefault = backDefault;
     }
 
-    public Object getBackFemale() {
+    public String getBackFemale() {
         return backFemale;
     }
 
-    public void setBackFemale(Object backFemale) {
+    public void setBackFemale(String backFemale) {
         this.backFemale = backFemale;
     }
 
@@ -54,11 +54,11 @@ public class Sprites {
         this.backShiny = backShiny;
     }
 
-    public Object getBackShinyFemale() {
+    public String getBackShinyFemale() {
         return backShinyFemale;
     }
 
-    public void setBackShinyFemale(Object backShinyFemale) {
+    public void setBackShinyFemale(String backShinyFemale) {
         this.backShinyFemale = backShinyFemale;
     }
 
@@ -70,11 +70,11 @@ public class Sprites {
         this.frontDefault = frontDefault;
     }
 
-    public Object getFrontFemale() {
+    public String getFrontFemale() {
         return frontFemale;
     }
 
-    public void setFrontFemale(Object frontFemale) {
+    public void setFrontFemale(String frontFemale) {
         this.frontFemale = frontFemale;
     }
 
@@ -86,11 +86,11 @@ public class Sprites {
         this.frontShiny = frontShiny;
     }
 
-    public Object getFrontShinyFemale() {
+    public String getFrontShinyFemale() {
         return frontShinyFemale;
     }
 
-    public void setFrontShinyFemale(Object frontShinyFemale) {
+    public void setFrontShinyFemale(String frontShinyFemale) {
         this.frontShinyFemale = frontShinyFemale;
     }
 
