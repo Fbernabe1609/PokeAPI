@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/NumNAmePokemonEditText"
+            android:id="@+id/NumNamePokemonEditText"
             android:layout_width="195dp"
             android:layout_height="48dp"
             android:layout_marginStart="227dp"
@@ -42,7 +42,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="59dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="66dp"
+            app:icon="?android:attr/actionModeWebSearchDrawable"
+            app:layout_constraintBottom_toTopOf="@+id/NumNamePokemonEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

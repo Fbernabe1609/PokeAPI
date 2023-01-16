@@ -21,8 +21,8 @@
 
         <ImageView
             android:id="@+id/pokemonSprite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
             android:layout_marginTop="28dp"
             android:layout_marginBottom="25dp"
             app:layout_constraintBottom_toTopOf="@+id/pokemonName2"
@@ -45,6 +45,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
         android:layout_width="330dp"
         android:layout_height="200dp"
         android:layout_marginTop="22dp"
@@ -91,6 +92,29 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="259dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="70dp"
+        android:text="Guardar Pokemon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="Pokemon registrado con el id: "
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
