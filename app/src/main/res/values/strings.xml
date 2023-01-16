@@ -6,4 +6,6 @@
     <string name="especie">Especie:</string>
     <string name="tipos">Tipos:</string>
     <string name="experiencia_base">Experiencia base:</string>
+    <string name="guardar_pokemon">Guardar Pokemon</string>
+    <string name="pokemon_registrado_con_el_id">Pokemon registrado con el id:</string>
 </resources>
