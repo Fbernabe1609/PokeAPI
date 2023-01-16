@@ -7,10 +7,13 @@ import com.squareup.picasso.Picasso;
 import com.tareaapi.pokeapi.MainActivity;
 import com.tareaapi.pokeapi.R;
 import com.tareaapi.pokeapi.models.Pokemon;
+import com.tareaapi.pokeapi.models.PostPokemon;
 import com.tareaapi.pokeapi.service.PokemonLoader;
+import com.tareaapi.pokeapi.service.PostLoader;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,8 +29,10 @@ public class PokemonActivity extends AppCompatActivity{
 
     String pokemonName = PokemonAdapter.pokemonNameData;
     Pokemon pokemonStar = MainActivity.pokemonZ;
-    TextView types, species, baseExperience, pokemonNameTV;
+    Pokemon pokeGod;
+    TextView types, species, baseExperience, pokemonNameTV,text;
     ImageView image;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +50,8 @@ public class PokemonActivity extends AppCompatActivity{
         species = (TextView) findViewById(R.id.SpeciesTextView);
         baseExperience = (TextView) findViewById(R.id.BaseExperienceTextView);
         image = (ImageView) findViewById(R.id.pokemonSprite);
+        button = (Button) findViewById(R.id.button2);
+        text = (TextView) findViewById(R.id.textView2);
 
         PokemonLoader loader = new PokemonLoader();
         if (pokemonStar == null) {
@@ -64,6 +71,28 @@ public class PokemonActivity extends AppCompatActivity{
         } else {
             getData(pokemonStar);
         }
+
+        button.setOnClickListener(v -> {
+            PostLoader postLoader = new PostLoader();
+            Call<PostPokemon> call = postLoader.sendData(pokeGod.getName(),pokeGod.getId());
+            call.enqueue(new Callback<PostPokemon>() {
+                @Override
+                public void onResponse(Call<PostPokemon> call, Response<PostPokemon> response) {
+                    int id = response.body().getId();
+                    try {
+                        text.setText(text.getText() + " " + id);
+                        text.setVisibility(View.VISIBLE);
+                    } catch (Exception e) {
+                        Toast.makeText(PokemonActivity.this, "Ha ocurrido un error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<PostPokemon> call, Throwable t) {
+                    Toast.makeText(PokemonActivity.this, "Ha ocurrido un error.", Toast.LENGTH_LONG).show();
+                }
+            });
+        });
     }
 
     @Override
@@ -88,6 +117,7 @@ public class PokemonActivity extends AppCompatActivity{
 
                 species.setText(species.getText() + " " + pokemon.getSpecies().getName());
                 baseExperience.setText(baseExperience.getText() + " " + String.valueOf(pokemon.getBaseExperience()));
+                pokeGod = pokemon;
             }
         } catch (Exception e) {
             Toast.makeText(PokemonActivity.this, "Ha ocurrido un error: " + e.getMessage(), Toast.LENGTH_LONG).show();
