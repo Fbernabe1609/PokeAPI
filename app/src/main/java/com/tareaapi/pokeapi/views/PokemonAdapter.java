@@ -1,6 +1,7 @@
 package com.tareaapi.pokeapi.views;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +14,12 @@ import com.tareaapi.pokeapi.models.PokemonList;
 
 import java.util.List;
 
-public class PokemonAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
+public class PokemonAdapter extends RecyclerView.Adapter<PokemonViewHolder>{
 
     List<PokemonList> pokemons;
     Context context;
+
+    static String pokemonNameData;
 
     public PokemonAdapter(List<PokemonList> pokemons, Context context) {
         this.pokemons = pokemons;
@@ -35,7 +38,9 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
         final int num = position;
         holder.pokemonName.setText(pokemons.get(num).getName());
         holder.pokemonContainer.setOnClickListener(view -> {
-            String url = pokemons.get(num).getUrl();
+            pokemonNameData = pokemons.get(num).getName();
+            Intent intent = new Intent(context,PokemonActivity.class);
+            context.startActivity(intent);
         });
     }
 

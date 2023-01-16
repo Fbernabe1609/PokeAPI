@@ -4,28 +4,26 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Type {
-
-    @SerializedName("slot")
+    @SerializedName("name")
     @Expose
-    private int slot;
-    @SerializedName("type")
+    private String name;
+    @SerializedName("url")
     @Expose
-    private String type;
+    private String url;
 
-    public int getSlot() {
-        return slot;
+    public String getName() {
+        return name;
     }
 
-    public void setSlot(int slot) {
-        this.slot = slot;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public String getUrl() {
+        return url;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setUrl(String url) {
+        this.url = url;
     }
-
 }

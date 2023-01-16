@@ -5,16 +5,27 @@ import com.google.gson.annotations.SerializedName;
 
 public class Move {
 
-    @SerializedName("move")
+    @SerializedName("name")
     @Expose
-    private Move__1 move;
+    private String name;
+    @SerializedName("url")
+    @Expose
+    private String url;
 
-    public Move__1 getMove() {
-        return move;
+    public String getName() {
+        return name;
     }
 
-    public void setMove(Move__1 move) {
-        this.move = move;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
 }

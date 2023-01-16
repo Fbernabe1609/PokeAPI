@@ -1,6 +1,7 @@
 package com.tareaapi.pokeapi.service;
 
 import com.tareaapi.pokeapi.models.Pokedex;
+import com.tareaapi.pokeapi.models.Pokemon;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -25,12 +26,13 @@ public class PokemonLoader implements PokeAPI{
     }
 
     @Override
-    public Call<Pokedex> getPokemonData(String pokemonName) {
+    public Call<Pokemon> getPokemonData(String pokemonName) {
         return pokeAPI.getPokemonData(pokemonName);
     }
 
     @Override
-    public Call<Pokedex> getPokemonData(int pokemonNum) {
+    public Call<Pokemon> getPokemonData(int pokemonNum) {
         return pokeAPI.getPokemonData(pokemonNum);
     }
+
 }

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.tareaapi.pokeapi.models.Pokedex;
+import com.tareaapi.pokeapi.models.Pokemon;
 import com.tareaapi.pokeapi.models.PokemonList;
 import com.tareaapi.pokeapi.service.PokemonLoader;
 import com.tareaapi.pokeapi.views.PokemonAdapter;
@@ -46,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 pokemonList.setHasFixedSize(true);
                 RecyclerView.LayoutManager manager = new LinearLayoutManager(MainActivity.this);
                 pokemonList.setLayoutManager(manager);
-                System.out.println(pokemons.get(0).getName());
             }
 
             @Override

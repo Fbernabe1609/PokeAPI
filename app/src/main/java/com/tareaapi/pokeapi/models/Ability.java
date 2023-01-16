@@ -3,41 +3,29 @@ package com.tareaapi.pokeapi.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-
 public class Ability {
 
-    @SerializedName("ability")
+    @SerializedName("name")
     @Expose
-    private Ability__1 ability;
-    @SerializedName("is_hidden")
+    private String name;
+    @SerializedName("url")
     @Expose
-    private boolean isHidden;
-    @SerializedName("slot")
-    @Expose
-    private int slot;
+    private String url;
 
-    public Ability__1 getAbility() {
-        return ability;
+    public String getName() {
+        return name;
     }
 
-    public void setAbility(Ability__1 ability) {
-        this.ability = ability;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public boolean getIsHidden() {
-        return isHidden;
+    public String getUrl() {
+        return url;
     }
 
-    public void setIsHidden(boolean isHidden) {
-        this.isHidden = isHidden;
-    }
-
-    public int getSlot() {
-        return slot;
-    }
-
-    public void setSlot(int slot) {
-        this.slot = slot;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
 }

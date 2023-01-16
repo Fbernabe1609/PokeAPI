@@ -9,58 +9,54 @@ public class Pokemon {
 
     @SerializedName("abilities")
     @Expose
-    private List<Ability> abilities = null;
-    @SerializedName("forms")
-    @Expose
-    private List<Form> forms = null;
+    private List<Abilities> abilities = null;
+
     @SerializedName("game_indices")
     @Expose
     private List<GameIndex> gameIndices = null;
+
     @SerializedName("id")
     @Expose
     private int id;
-    @SerializedName("is_default")
+
+    @SerializedName("base_experience")
     @Expose
-    private boolean isDefault;
+    private int baseExperience;
+
     @SerializedName("moves")
     @Expose
-    private List<Move> moves = null;
+    private List<Moves> moves = null;
+
     @SerializedName("name")
     @Expose
     private String name;
+
     @SerializedName("order")
     @Expose
     private int order;
-    @SerializedName("past_types")
-    @Expose
-    private List<Object> pastTypes = null;
+
     @SerializedName("species")
     @Expose
     private Species species;
+
     @SerializedName("sprites")
     @Expose
     private Sprites sprites;
+
     @SerializedName("types")
     @Expose
-    private List<Type> types = null;
+    private List<Types> types = null;
+
     @SerializedName("weight")
     @Expose
     private int weight;
 
-    public List<Ability> getAbilities() {
+    public List<Abilities> getAbilities() {
         return abilities;
     }
 
-    public void setAbilities(List<Ability> abilities) {
+    public void setAbilities(List<Abilities> abilities) {
         this.abilities = abilities;
-    }
-
-    public List<Form> getForms() {
-        return forms;
-    }
-
-    public void setForms(List<Form> forms) {
-        this.forms = forms;
     }
 
     public List<GameIndex> getGameIndices() {
@@ -79,19 +75,11 @@ public class Pokemon {
         this.id = id;
     }
 
-    public boolean getIsDefault() {
-        return isDefault;
-    }
-
-    public void setIsDefault(boolean isDefault) {
-        this.isDefault = isDefault;
-    }
-
-    public List<Move> getMoves() {
+    public List<Moves> getMoves() {
         return moves;
     }
 
-    public void setMoves(List<Move> moves) {
+    public void setMoves(List<Moves> moves) {
         this.moves = moves;
     }
 
@@ -111,14 +99,6 @@ public class Pokemon {
         this.order = order;
     }
 
-    public List<Object> getPastTypes() {
-        return pastTypes;
-    }
-
-    public void setPastTypes(List<Object> pastTypes) {
-        this.pastTypes = pastTypes;
-    }
-
     public Species getSpecies() {
         return species;
     }
@@ -135,11 +115,11 @@ public class Pokemon {
         this.sprites = sprites;
     }
 
-    public List<Type> getTypes() {
+    public List<Types> getTypes() {
         return types;
     }
 
-    public void setTypes(List<Type> types) {
+    public void setTypes(List<Types> types) {
         this.types = types;
     }
 
@@ -151,4 +131,11 @@ public class Pokemon {
         this.weight = weight;
     }
 
+    public int getBaseExperience() {
+        return baseExperience;
+    }
+
+    public void setBaseExperience(int baseExperience) {
+        this.baseExperience = baseExperience;
+    }
 }
