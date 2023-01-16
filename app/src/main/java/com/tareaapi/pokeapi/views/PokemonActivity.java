@@ -18,7 +18,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Locale;
 import java.util.Objects;
 
 import retrofit2.Call;
@@ -30,7 +29,7 @@ public class PokemonActivity extends AppCompatActivity{
     String pokemonName = PokemonAdapter.pokemonNameData;
     Pokemon pokemonStar = MainActivity.pokemonZ;
     Pokemon pokeGod;
-    TextView types, species, baseExperience, pokemonNameTV,text;
+    TextView types, species, baseExperience, pokemonNameTV, text, num;
     ImageView image;
     Button button;
 
@@ -52,6 +51,7 @@ public class PokemonActivity extends AppCompatActivity{
         image = (ImageView) findViewById(R.id.pokemonSprite);
         button = (Button) findViewById(R.id.button2);
         text = (TextView) findViewById(R.id.textView2);
+        num = (TextView) findViewById(R.id.IDTextView);
 
         PokemonLoader loader = new PokemonLoader();
         if (pokemonStar == null) {
@@ -113,8 +113,11 @@ public class PokemonActivity extends AppCompatActivity{
                 }
                 types.setText(text);
                 pokemonNameTV.setText(pokemon.getName().toUpperCase());
-                Picasso.get().load(pokemon.getSprites().getFrontDefault()).into(image);
-
+                String img = pokemon.getSprites().getFrontDefault();
+                if (img != null) {
+                    Picasso.get().load(img).into(image);
+                }
+                num.setText(num.getText() + " " + pokemon.getId());
                 species.setText(species.getText() + " " + pokemon.getSpecies().getName());
                 baseExperience.setText(baseExperience.getText() + " " + String.valueOf(pokemon.getBaseExperience()));
                 pokeGod = pokemon;

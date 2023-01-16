@@ -8,4 +8,5 @@
     <string name="experiencia_base">Experiencia base:</string>
     <string name="guardar_pokemon">Guardar Pokemon</string>
     <string name="pokemon_registrado_con_el_id">Pokemon registrado con el id:</string>
+    <string name="n">Nº:</string>
 </resources>
